@@ -1,0 +1,11 @@
+.home-container {
+    height: 100vh;
+    background-color: aqua;
+}
+
+.home-bg-image {
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+}
+

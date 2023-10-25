@@ -46,7 +46,23 @@ body {
   grid-template-columns: 40% 60%;
 }
 
+.active {
+  color: var(--color-primary) !important;
+  text-decoration-line: underline !important;
+}
 .navbar {
+  top: 0;
   padding-right: 7.9rem;
   padding-left: 7.9rem;
+  background: none;
+}
+
+nav a {
+   color: white !important; 
+   font-size: larger !important;
+}
+
+nav a:hover {
+  color: var(--color-primary) !important;
+  text-decoration-line: underline !important;
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from './Varaible';
+import { Logo } from './Varaible';
 
 const Navbar = () => (
-  <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <nav className="navbar navbar-expand-lg position-fixed w-100">
     <div className="container-fluid">
       <Link to="/" className="navbar-brand">
         <img src={Logo} alt="Logo" />
@@ -22,7 +22,7 @@ const Navbar = () => (
       <div className="collapse navbar-collapse" id="navbarText">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-end">
           <li className="nav-item">
-            <Link to="/home" className="nav-link active" aria-current="page">
+            <Link to="/" className="nav-link active" aria-current="page">
               Home
             </Link>
           </li>
