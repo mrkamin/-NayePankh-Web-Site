@@ -26,6 +26,13 @@
     top: 0;
     
 }
+.donate-btn {
+    color: rgb(38, 32, 30) !important;
+}
+.donate-btn:hover {
+    background-color: #61dafb !important;
+    color: rgb(38, 32, 30) !important;
+}
 
 @media screen and (max-width: 1224px) {
     .license {
