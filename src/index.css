@@ -29,6 +29,7 @@
   --page-six-right-side-color: #012379;
   --page-seven-left-side-color: #01b769;
   --page-seven-right-side-color: #007946;
+  --brand-color:  rgb(38, 32, 30);
 }
 
 * {
@@ -52,9 +53,10 @@ body {
 }
 .navbar {
   top: 0;
-  padding-right: 7.9rem;
-  padding-left: 7.9rem;
-  background: none;
+  padding-right: 10%;
+  padding-left: 10%;
+  background:  var(--brand-color);
+  z-index: 1;
 }
 
 nav a {
@@ -65,4 +67,12 @@ nav a {
 nav a:hover {
   color: var(--color-primary) !important;
   text-decoration-line: underline !important;
+}
+
+@media screen and (max-width: 1224px) {
+  .navbar {
+    top: 0;
+    padding: 0;
+    background: none;
+  }
 }

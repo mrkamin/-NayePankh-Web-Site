@@ -6,10 +6,10 @@ const Navbar = () => (
   <nav className="navbar navbar-expand-lg position-fixed w-100">
     <div className="container-fluid">
       <NavLink to="/" className="navbar-brand">
-        <img src={Logo} alt="Logo" />
+        <img src={Logo} alt="Logo" className="rounded-2 logo" />
       </NavLink>
       <button
-        className="navbar-toggler"
+        className="navbar-toggler bg-white"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarText"
