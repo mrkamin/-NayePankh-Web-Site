@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  --header-bg-color: #21222a;
+  --main-bg-color: #282d35;
+  --title-color: #61dafb;
+  --text-color-dark: #f7f7f7;
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --color-purple: #6111a5;
+  --color-dark: #cdcbcf;
+  --transition: all 400ms ease;
+  --container-width-lg: 90%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+  --ff: "Poppins";
+  --page-two-left-side-color: #4926c6;
+  --page-two-right-side-color: #1c0361;
+  --page-three-left-side-color: #0d1039;
+  --page-three-right-side-color: #131549;
+  --page-four-left-side-color: #16263b;
+  --page-four-right-side-color: #0d131b;
+  --page-five-left-side-color: #1059ce;
+  --page-five-right-side-color: #22c1da;
+  --page-six-right-side-color: #012379;
+  --page-seven-left-side-color: #01b769;
+  --page-seven-right-side-color: #007946;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
 }
