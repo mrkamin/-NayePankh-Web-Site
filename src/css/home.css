@@ -1,6 +1,5 @@
 .home-container {
-    height: 100vh;
-    background-color: aqua;
+    height: 1000px;
 }
 
 .home-bg-image {
@@ -9,3 +8,32 @@
     object-fit: cover;
 }
 
+.license {
+    top: 160px;
+    left: 10.5%;
+    color: white;
+}
+
+.home-cont-paragraph {
+    top: 250px;
+    left: 20%;
+}
+
+.overlay {
+    height: 1000px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.39);
+    top: 0;
+    
+}
+
+@media screen and (max-width: 1224px) {
+    .license {
+        left: 1% ;
+    }
+}
+@media screen and (max-width: 992px) {
+    .license {
+        display: none;
+    }
+}
