@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Logo } from './Varaible';
 
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg position-fixed w-100">
     <div className="container-fluid">
-      <Link to="/" className="navbar-brand">
+      <NavLink to="/" className="navbar-brand">
         <img src={Logo} alt="Logo" />
-      </Link>
+      </NavLink>
       <button
         className="navbar-toggler"
         type="button"
@@ -22,33 +22,47 @@ const Navbar = () => (
       <div className="collapse navbar-collapse" id="navbarText">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-end">
           <li className="nav-item">
-            <Link to="/" className="nav-link active" aria-current="page">
+            <NavLink
+              to="/"
+              exact
+              className="nav-link"
+              activeClassName="active"
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/aboutus" className="nav-link">
+            <NavLink to="/aboutus" className="nav-link" activeClassName="active">
               About Us
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/ourcertificate" className="nav-link">
+            <NavLink
+              to="/ourcertificate"
+              className="nav-link"
+              activeClassName="active"
+            >
               Our Certificates
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/newspaper" className="nav-link">
+            <NavLink
+              to="/newspaper"
+              className="nav-link"
+              activeClassName="active"
+            >
               NewsPaper-Recognition
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/donate" className="nav-link">
+            <NavLink to="/donate" className="nav-link" activeClassName="active">
               Donate
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 );
+
 export default Navbar;
