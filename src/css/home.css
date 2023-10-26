@@ -1,56 +1,197 @@
-.home-container {
-    height: 1000px;
+.home-cont-sect-one {
+    height: 970px;
 }
 
-.home-bg-image {
-    width: 100%;
-    height: 1000px;
+.home-cont-sect-one-items-item-one-img {
+    height: 970px;
     object-fit: cover;
 }
-
-.license {
-    top: 160px;
-    left: 10.5%;
-    color: white;
-}
-
-.home-cont-paragraph {
-    top: 250px;
-    left: 20%;
-}
-
-.homp-paragraph {
-    font-weight: 900 !important;
-    font-size: 50px !important;
-}
-
 .overlay {
-    height: 1000px;
-    width: 100%;
+    height: 970px;
     background-color: rgba(0, 0, 0, 0.39);
     top: 0;
-    
 }
-.donate-btn {
+
+.home-cont-sect-one-items-item-two {
+    top: 140px;
+    left: 10.5%;
+}
+
+.home-cont-sect-one-items-item-three {
+    top: 300px;
+    left: 25%;
+}
+
+.home-cont-sect-one-items-item-three-h1 {
+    font-weight: 900 !important;
+    font-size: 50px !important;  
+}
+
+.home-cont-sect-one-items-item-three-btn {
     color: rgb(38, 32, 30) !important;
 }
-.donate-btn:hover {
+
+.home-cont-sect-one-items-item-three-btn:hover {
     background-color: #61dafb !important;
     color: rgb(38, 32, 30) !important;
 }
 
-.aboutus-paragraph {
-    font-size: 70px;
-    font-weight: 900;
+.home-cont-sect-two-items-item-two h1 {
+   font-weight: 900;
+   font-size: 55px;
 }
 
+.home-cont-sect-two-items-item-one-img {
+    height: 800px;
+}
+
+
 @media screen and (max-width: 1224px) {
-    .license {
-        left: 1% ;
+    .home-cont-sect-one {
+        height: 800px;
+    }
+
+    .home-cont-sect-one-items-item-one-img {
+        height: 800px;
+    }
+
+    .overlay {
+        height: 800px;
+    }
+
+    .home-cont-sect-one-items-item-two {
+        left: 2% ;
+    }
+
+    .home-cont-sect-one-items-item-three {
+        top: 180px;
+        left: 20%;
+    }
+
+    .home-cont-sect-two {
+        width: 60%;
+        height: 148vh;
+    }
+    .home-cont-sect-two-items-item-one-img {
+        position: absolute;
+        top: 450px;
+        border: none;
+        border-radius: 1rem;
+    }
+
+    .home-cont-sect-two-items-item-two {
+        position: absolute;
+        top: 20px;
     }
 }
 @media screen and (max-width: 992px) {
-    .license {
-        display: none;
+    .home-cont-sect-one {
+        height: 700px;
+    }
+
+    .home-cont-sect-one-items-item-one-img {
+        height: 700px;
+    }
+
+    .overlay {
+        height: 700px;
+    }
+
+    .home-cont-sect-one-items-item-two {
+        left: 10% ;
+        top: 600px;
+    }
+
+    .home-cont-sect-one-items-item-three {
+        top: 200px;
+        left:10%;
+        gap: 0.5rem !important;
+    }
+
+    .home-cont-sect-two {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .home-cont-sect-one {
+        height: 900px;
+    }
+
+    .home-cont-sect-one-items-item-one-img {
+        height: 900px;
+    }
+
+    .overlay {
+        height: 900px;
+    }
+
+    .home-cont-sect-one-items-item-two {
+        left: 2% ;
+        top: 700px;
+    }
+
+    .home-cont-sect-one-items-item-three {
+        top: 150px;
+        left:3%;
+    }
+
+    .home-cont-sect-two {
+        width: 90%;
+        height: 151.5vh;
+    }
+
+    .home-cont-sect-two-items-item-one-img {
+        position: absolute;
+        top: 480px;
+    }
+
+    .home-cont-sect-two-items-item-two {
+        position: absolute;
+        top: 20px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .home-cont-sect-two-items-item-one-img {
+        top: 600px;
+    }
+
+    .home-cont-sect-two {
+        width: 98%;
+        height: 166vh;
+    }
+}
+@media screen and (max-width: 400px) {
+    .home-cont-sect-two-items-item-one-img {
+        top: 620px;
+    }
+    .home-cont-sect-two {
+        width: 98%;
+        height: 168vh;
+    }
+}
+@media screen and (max-width: 322px) {
+    .home-cont-sect-two-items-item-one-img {
+        top: 700px;
+    }
+    .home-cont-sect-two {
+        width: 98%;
+        height: 178vh;
+    }
+}
+@media screen and (max-width: 300px) {
+    .home-cont-sect-two-items-item-one-img {
+        top: 800px;
+    }
+
+    .home-cont-sect-one-items-item-two {
+        top: 800px;
+        left: 10.5%;
+    }
+
+    .home-cont-sect-two {
+        width: 98%;
+        height: 190vh;
     }
 }

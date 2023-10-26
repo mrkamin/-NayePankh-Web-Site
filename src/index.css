@@ -46,7 +46,13 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 50% 40%;
+  grid-template-columns: 55% 30%;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 100px;
 }
 
 .active {
@@ -57,7 +63,6 @@ body {
   top: 0;
   padding-right: 10%;
   padding-left: 10%;
-  background:  var(--brand-color);
   z-index: 1;
 }
 
@@ -74,7 +79,21 @@ nav a:hover {
 @media screen and (max-width: 1224px) {
   .navbar {
     top: 0;
-    padding: 0;
+    padding: 10px;
     background: none;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .logo {
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 60px;
   }
 }
