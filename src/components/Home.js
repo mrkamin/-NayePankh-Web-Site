@@ -1,8 +1,15 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 import IMG1 from '../assets/IMG-20231025-WA0036.jpg';
 import IMG2 from '../assets/IMG-20231025-WA0046.jpg';
+import IMG3 from '../assets/IMG-20231025-WA0050.jpg';
 import { Aboutusimg } from './Varaible';
 import '../css/home.css';
 
@@ -155,6 +162,28 @@ const Home = () => {
             </p>
           </div>
         </div>
+      </section>
+      <section className="home-cont-sect-four">
+        <Swiper
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          spaceBetween={200}
+          slidesPerView={1}
+          className="swiper-contatiner w-100"
+        >
+          <SwiperSlide>
+            <div className="d-flex justify-content-between">
+              <img src={IMG3} alt="donation photo" />
+              <P>
+                "NayePankh foundation has been working since 2021 for under and
+                less priveleged people in the field of hunger, sanitary, health,
+                education, awareness and rights.."
+              </P>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </section>
     </>
   );
