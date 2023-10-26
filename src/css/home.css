@@ -75,7 +75,16 @@
 }
 
 .swiper-contatiner {
+    height: 600px;
+}
+
+.swiper-cont-slide img {
+    border: none;
+    border-radius: 50%;
     height: 500px;
+}
+
+.swiper-cont-slide p {
 }
 
 @media screen and (max-width: 1224px) {

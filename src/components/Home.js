@@ -18,18 +18,30 @@ gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
   const homeContParagraph = useRef();
   const homeAboutContainer = useRef();
+  const homeSectionThree = useRef();
 
   useEffect(() => {
     const contex = gsap.context(() => {
       gsap.from(homeAboutContainer.current, {
-        y: '40%', // Move from the bottom
+        y: '40%',
         opacity: 0,
         duration: 1,
         scrollTrigger: {
           trigger: homeAboutContainer.current,
-          start: 'top 100%', // Adjust this value as needed to control when the animation starts
-          end: 'top 60%', // Adjust this value as needed to control when the animation ends
-          scrub: 1, // Smooth scrolling effect
+          start: 'top 100%',
+          end: 'top 60%',
+          scrub: 1,
+        },
+      });
+      gsap.from(homeSectionThree.current, {
+        x: '50%',
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: homeSectionThree.current,
+          start: 'top 100%',
+          end: 'top 100%',
+          scrub: 3,
         },
       });
       gsap.from(homeContParagraph.current, {
@@ -163,7 +175,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="home-cont-sect-four">
+      <section className="home-cont-sect-four" ref={homeSectionThree}>
         <Swiper
           pagination={{
             clickable: true,
@@ -171,16 +183,36 @@ const Home = () => {
           modules={[Pagination]}
           spaceBetween={200}
           slidesPerView={1}
-          className="swiper-contatiner w-100"
+          className="swiper-contatiner w-100 bg-white "
         >
           <SwiperSlide>
-            <div className="d-flex justify-content-between">
-              <img src={IMG3} alt="donation photo" />
-              <P>
-                "NayePankh foundation has been working since 2021 for under and
+            <div className="d-flex justify-content-between align-items-center swiper-cont-slide text-dark p-5 gap-5 text-center">
+              <img src={IMG3} alt="donatinphoto" />
+              <p className="fs-1">
+                &ldquo;NayePankh foundation has been working since 2021 for under and
                 less priveleged people in the field of hunger, sanitary, health,
-                education, awareness and rights.."
-              </P>
+                education, awareness and rights..&ldquo;
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="d-flex justify-content-between align-items-center swiper-cont-slide text-dark p-5 gap-5 text-center">
+              <img src={IMG3} alt="donatinphoto" />
+              <p className="fs-1">
+                &ldquo;NayePankh foundation has been working since 2021 for under and
+                less priveleged people in the field of hunger, sanitary, health,
+                education, awareness and rights..&ldquo;
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="d-flex justify-content-between align-items-center swiper-cont-slide text-dark p-5 gap-5 text-center">
+              <img src={IMG3} alt="donatinphoto" />
+              <p className="fs-1">
+                &ldquo;NayePankh foundation has been working since 2021 for under and
+                less priveleged people in the field of hunger, sanitary, health,
+                education, awareness and rights..&ldquo;
+              </p>
             </div>
           </SwiperSlide>
         </Swiper>
