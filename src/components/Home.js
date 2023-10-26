@@ -106,9 +106,7 @@ const Home = () => {
               Service to mankind is the service to god. Let&apos;s revolutionise
               the society together!.
             </p>
-            <div
-              className="d-flex justify-content-between"
-            >
+            <div className="d-flex justify-content-between">
               <button
                 type="button"
                 className="btn bg-white donate-btn"
@@ -128,9 +126,33 @@ const Home = () => {
         </div>
       </section>
       <section className="home-cont-sect-three">
-        <div className="">
-          <div>
-            <img src={IMG2} alt="photo2" className="w-100" />
+        <div className="home-cont-sect-three-items position-relative">
+          <div className="home-cont-sect-three-items-item-one">
+            <img
+              src={IMG2}
+              alt="photo2"
+              className="w-100 home-cont-sect-three-items-item-one-img"
+            />
+          </div>
+          <div className="sect-three-overlay w-100 position-absolute" />
+          <div className="home-cont-sect-three-items-item-two position-absolute w-100 text-center">
+            <h1>
+              Welcome to
+              <br />
+              NayePankh Foundation
+            </h1>
+            <p className="fs-3 fw-bolder">UP GOVT. | 80G & 12A Registered</p>
+          </div>
+          <div className="home-cont-sect-three-items-item-three position-absolute w-100 text-center">
+            <p className="fs-2 fw-bolder">
+              We are one of the Biggest Student
+              <br />
+              led NGO of India with its operations extended in the city of
+              Kanpur,
+              {' '}
+              <br />
+              Ghaziabad and various other cities.
+            </p>
           </div>
         </div>
       </section>
