@@ -40,11 +40,13 @@
 
 body {
   font-family: var(--ff);
+  background-color: var(--brand-color);
+  color: var(--color-white);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 50% 40%;
 }
 
 .active {

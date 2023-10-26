@@ -1,20 +1,35 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
-import { HomeBgImage } from './Varaible';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import IMG1 from '../assets/IMG-20231025-WA0036.jpg';
+import { Aboutusimg } from './Varaible';
 import '../css/home.css';
 
-const Home = () => {
-  const homeContainer = useRef();
-  const homeContParagraph = useRef();
+gsap.registerPlugin(ScrollTrigger);
 
-  useLayoutEffect(() => {
+const Home = () => {
+  const homeContParagraph = useRef();
+  const homeAboutContainer = useRef();
+
+  useEffect(() => {
     const contex = gsap.context(() => {
+      gsap.from(homeAboutContainer.current, {
+        y: '40%', // Move from the bottom
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: homeAboutContainer.current,
+          start: 'top 100%', // Adjust this value as needed to control when the animation starts
+          end: 'top 60%', // Adjust this value as needed to control when the animation ends
+          scrub: 1, // Smooth scrolling effect
+        },
+      });
       gsap.from(homeContParagraph.current, {
         duration: 3,
         y: '20%',
         ease: 'bounce',
       });
-    }, homeContainer);
+    });
     return () => contex.revert();
   }, []);
 
@@ -22,7 +37,7 @@ const Home = () => {
     <>
       <div className="home-container">
         <div className="home-container-back-image bg-dark">
-          <img src={HomeBgImage} alt="HomeLogo" className="home-bg-image" />
+          <img src={IMG1} alt="HomeLogo" className="home-bg-image" />
         </div>
         <div className="overlay position-absolute" />
         <div className="position-absolute license">
@@ -32,7 +47,7 @@ const Home = () => {
           className="home-cont-paragraph position-absolute text-white d-flex flex-column gap-5"
           ref={homeContParagraph}
         >
-          <h1 className="fw-bolder">
+          <h1 className="homp-paragraph">
             It&apos;s that easy to
             {' '}
             <br />
@@ -42,7 +57,7 @@ const Home = () => {
             <br />
             Their Faces
           </h1>
-          <p>
+          <p className="fs-5">
             We don&apos;t ask for much, just help us with what
             <br />
             you can-Be it Money, skill or Your time
@@ -50,6 +65,48 @@ const Home = () => {
           <button type="button" className="btn bg-white donate-btn">
             Donate Now
           </button>
+        </div>
+      </div>
+      <div
+        className="container grid home-about-container"
+        ref={homeAboutContainer}
+      >
+        <div ref={homeContParagraph}>
+          <img src={Aboutusimg} alt="aboutimg" />
+        </div>
+        <div className="d-flex flex-column  justify-content-center gap-3">
+          <h5>ABOUT US</h5>
+          <h1 className="aboutus-paragraph">
+            Think global,
+            {' '}
+            <br />
+            {' '}
+            Act local.
+          </h1>
+          <p>
+            &ldquo;NayePankh Foundation&ldquo; is a non governmental
+            organisation with a strong desire to help the society and make it a
+            better place for all, by doing everything in our power and to make
+            our vision successful we would require your vital support. Service
+            to mankind is the service to god. Let&apos;s revolutionise the
+            society together!.
+          </p>
+          <div className="d-flex justify-content-between">
+            <button
+              type="button"
+              className="btn bg-white donate-btn"
+              alt="learn more btn"
+            >
+              LEARN MORE
+            </button>
+            <button
+              type="button"
+              className="btn bg-white donate-btn"
+              alt="learn more btn"
+            >
+              OUR CERTIFICATES
+            </button>
+          </div>
         </div>
       </div>
     </>

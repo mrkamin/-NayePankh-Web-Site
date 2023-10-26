@@ -19,6 +19,11 @@
     left: 20%;
 }
 
+.homp-paragraph {
+    font-weight: 900 !important;
+    font-size: 50px !important;
+}
+
 .overlay {
     height: 1000px;
     width: 100%;
@@ -32,6 +37,11 @@
 .donate-btn:hover {
     background-color: #61dafb !important;
     color: rgb(38, 32, 30) !important;
+}
+
+.aboutus-paragraph {
+    font-size: 70px;
+    font-weight: 900;
 }
 
 @media screen and (max-width: 1224px) {
