@@ -75,16 +75,15 @@
 }
 
 .swiper-contatiner {
-    height: 600px;
+    height: 400px;
 }
 
 .swiper-cont-slide img {
     border: none;
     border-radius: 50%;
-    height: 500px;
-}
-
-.swiper-cont-slide p {
+    height: 350px;
+    width: 70%;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 1224px) {
